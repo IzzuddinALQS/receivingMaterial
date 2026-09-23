@@ -20,14 +20,14 @@ export default function Show({ goodsReceipt }) {
                                     {goodsReceipt.goods_receipt_no}
                                 </h1>
 
-                                <p className="text-sm text-gray-600">
+                                <p className="text-sm text-slate-600">
                                     Detail penerimaan barang
                                 </p>
                             </div>
 
                             <Link
                                 href={route("goods-receipts.index")}
-                                className="rounded-md bg-gray-200 px-4 py-2"
+                                className="rounded-md bg-slate-200 px-4 py-2"
                             >
                                 Kembali
                             </Link>
@@ -35,7 +35,7 @@ export default function Show({ goodsReceipt }) {
 
                         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                             <div>
-                                <p className="text-sm text-gray-500">
+                                <p className="text-sm text-slate-500">
                                     Supplier
                                 </p>
 
@@ -45,7 +45,9 @@ export default function Show({ goodsReceipt }) {
                             </div>
 
                             <div>
-                                <p className="text-sm text-gray-500">Tanggal</p>
+                                <p className="text-sm text-slate-500">
+                                    Tanggal
+                                </p>
 
                                 <p className="font-medium">
                                     {new Date(
@@ -62,18 +64,18 @@ export default function Show({ goodsReceipt }) {
                         <div className="mt-8">
                             <h2 className="text-lg font-bold">Daftar Produk</h2>
 
-                            <table className="mt-3 min-w-full border border-gray-200">
-                                <thead className="bg-gray-100">
+                            <table className="mt-3 min-w-full divide-y divide-slate-200 text-sm">
+                                <thead className="bg-slate-50">
                                     <tr>
-                                        <th className="border px-4 py-3 text-left">
+                                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                             No
                                         </th>
 
-                                        <th className="border px-4 py-3 text-left">
+                                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                             Produk
                                         </th>
 
-                                        <th className="border px-4 py-3 text-left">
+                                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                             Quantity
                                         </th>
                                     </tr>
@@ -83,15 +85,15 @@ export default function Show({ goodsReceipt }) {
                                     {goodsReceipt.details.map(
                                         (detail, index) => (
                                             <tr key={detail.id}>
-                                                <td className="border px-4 py-3">
+                                                <td className="border-t border-slate-100 px-4 py-3">
                                                     {index + 1}
                                                 </td>
 
-                                                <td className="border px-4 py-3">
+                                                <td className="border-t border-slate-100 px-4 py-3">
                                                     {detail.product.name}
                                                 </td>
 
-                                                <td className="border px-4 py-3">
+                                                <td className="border-t border-slate-100 px-4 py-3">
                                                     {detail.quantity}
                                                 </td>
                                             </tr>
@@ -103,12 +105,12 @@ export default function Show({ goodsReceipt }) {
                                     <tr className="font-bold">
                                         <td
                                             colSpan="2"
-                                            className="border px-4 py-3 text-right"
+                                            className="border-t border-slate-100 px-4 py-3 text-right"
                                         >
                                             Total
                                         </td>
 
-                                        <td className="border px-4 py-3">
+                                        <td className="border-t border-slate-100 px-4 py-3">
                                             {totalQuantity}
                                         </td>
                                     </tr>

@@ -59,7 +59,7 @@ export default function Create({ suppliers, products }) {
                                 Tambah Goods Receipt
                             </h1>
 
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-slate-600">
                                 Masukkan data penerimaan barang.
                             </p>
                         </div>
@@ -80,7 +80,7 @@ export default function Create({ suppliers, products }) {
                                             e.target.value,
                                         )
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300"
+                                    className="mt-1 w-full rounded-md border-slate-300"
                                     placeholder="Contoh: GR-002"
                                 />
 
@@ -102,7 +102,7 @@ export default function Create({ suppliers, products }) {
                                     onChange={(e) =>
                                         setData("supplier_id", e.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300"
+                                    className="mt-1 w-full rounded-md border-slate-300"
                                 >
                                     <option value="">Pilih Supplier</option>
 
@@ -135,7 +135,7 @@ export default function Create({ suppliers, products }) {
                                     onChange={(e) =>
                                         setData("received_date", e.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300"
+                                    className="mt-1 w-full rounded-md border-slate-300"
                                 />
 
                                 {errors.received_date && (
@@ -175,7 +175,7 @@ export default function Create({ suppliers, products }) {
                                                     e.target.value,
                                                 )
                                             }
-                                            className="flex-1 rounded-md border-gray-300"
+                                            className="flex-1 rounded-md border-slate-300"
                                         >
                                             <option value="">
                                                 Pilih Produk
@@ -202,7 +202,7 @@ export default function Create({ suppliers, products }) {
                                                     e.target.value,
                                                 )
                                             }
-                                            className="w-32 rounded-md border-gray-300"
+                                            className="w-32 rounded-md border-slate-300"
                                         />
 
                                         {data.details.length > 1 && (
@@ -231,7 +231,7 @@ export default function Create({ suppliers, products }) {
                                     onChange={(e) =>
                                         setData("description", e.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300"
+                                    className="mt-1 w-full rounded-md border-slate-300"
                                     rows="3"
                                 />
                             </div>
@@ -240,7 +240,7 @@ export default function Create({ suppliers, products }) {
                             <div className="mt-6 flex gap-3">
                                 <Link
                                     href={route("goods-receipts.index")}
-                                    className="rounded-md bg-gray-200 px-4 py-2"
+                                    className="rounded-md bg-slate-200 px-4 py-2"
                                 >
                                     Batal
                                 </Link>
@@ -248,7 +248,7 @@ export default function Create({ suppliers, products }) {
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="rounded-md bg-indigo-600 px-4 py-2 text-white"
+                                    className="rounded-md bg-accent-600 px-4 py-2 text-white"
                                 >
                                     {processing ? "Menyimpan..." : "Simpan"}
                                 </button>

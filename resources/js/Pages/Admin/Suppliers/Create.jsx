@@ -19,7 +19,7 @@ export default function Create() {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
+                <h2 className="text-xl font-semibold leading-tight text-slate-800">
                     Tambah Supplier
                 </h2>
             }
@@ -30,11 +30,11 @@ export default function Create() {
                 <div className="mx-auto max-w-3xl sm:px-6 lg:px-8">
                     <div className="bg-white p-6 shadow-sm sm:rounded-lg">
                         <div className="mb-6">
-                            <h1 className="text-2xl font-bold text-gray-800">
+                            <h1 className="text-2xl font-bold text-slate-800">
                                 Tambah Supplier
                             </h1>
 
-                            <p className="mt-1 text-sm text-gray-600">
+                            <p className="mt-1 text-sm text-slate-600">
                                 Tambahkan supplier baru ke sistem.
                             </p>
                         </div>
@@ -43,7 +43,7 @@ export default function Create() {
                             <div>
                                 <label
                                     htmlFor="supplier_code"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Kode Supplier
                                 </label>
@@ -59,7 +59,7 @@ export default function Create() {
                                         )
                                     }
                                     placeholder="SUP-0001"
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.supplier_code && (
@@ -72,7 +72,7 @@ export default function Create() {
                             <div>
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Nama Supplier
                                 </label>
@@ -84,7 +84,7 @@ export default function Create() {
                                     onChange={(event) =>
                                         setData("name", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.name && (
@@ -97,7 +97,7 @@ export default function Create() {
                             <div>
                                 <label
                                     htmlFor="phone"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Telepon
                                 </label>
@@ -109,7 +109,7 @@ export default function Create() {
                                     onChange={(event) =>
                                         setData("phone", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.phone && (
@@ -122,7 +122,7 @@ export default function Create() {
                             <div>
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Email
                                 </label>
@@ -134,7 +134,7 @@ export default function Create() {
                                     onChange={(event) =>
                                         setData("email", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.email && (
@@ -147,7 +147,7 @@ export default function Create() {
                             <div>
                                 <label
                                     htmlFor="address"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Alamat
                                 </label>
@@ -159,7 +159,7 @@ export default function Create() {
                                         setData("address", event.target.value)
                                     }
                                     rows="4"
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.address && (
@@ -172,7 +172,7 @@ export default function Create() {
                             <div className="flex items-center gap-3">
                                 <Link
                                     href={route("admin.suppliers.index")}
-                                    className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300"
+                                    className="rounded-md bg-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-300"
                                 >
                                     Batal
                                 </Link>
@@ -180,7 +180,7 @@ export default function Create() {
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
+                                    className="rounded-md bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700 disabled:opacity-50"
                                 >
                                     {processing
                                         ? "Menyimpan..."

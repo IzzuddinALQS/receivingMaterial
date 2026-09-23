@@ -18,7 +18,7 @@ export default function Edit({ user }) {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
+                <h2 className="text-xl font-semibold leading-tight text-slate-800">
                     Edit User
                 </h2>
             }
@@ -29,11 +29,11 @@ export default function Edit({ user }) {
                 <div className="mx-auto max-w-3xl sm:px-6 lg:px-8">
                     <div className="bg-white p-6 shadow-sm sm:rounded-lg">
                         <div className="mb-6">
-                            <h1 className="text-2xl font-bold text-gray-800">
+                            <h1 className="text-2xl font-bold text-slate-800">
                                 Edit User
                             </h1>
 
-                            <p className="mt-1 text-sm text-gray-600">
+                            <p className="mt-1 text-sm text-slate-600">
                                 Ubah informasi dan role pengguna.
                             </p>
                         </div>
@@ -43,7 +43,7 @@ export default function Edit({ user }) {
                             <div>
                                 <label
                                     htmlFor="name"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Nama
                                 </label>
@@ -55,7 +55,7 @@ export default function Edit({ user }) {
                                     onChange={(event) =>
                                         setData("name", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.name && (
@@ -69,7 +69,7 @@ export default function Edit({ user }) {
                             <div>
                                 <label
                                     htmlFor="email"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Email
                                 </label>
@@ -81,7 +81,7 @@ export default function Edit({ user }) {
                                     onChange={(event) =>
                                         setData("email", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
                                 {errors.email && (
@@ -95,7 +95,7 @@ export default function Edit({ user }) {
                             <div>
                                 <label
                                     htmlFor="role"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Role
                                 </label>
@@ -106,7 +106,7 @@ export default function Edit({ user }) {
                                     onChange={(event) =>
                                         setData("role", event.target.value)
                                     }
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 >
                                     <option value="staff">Staff</option>
 
@@ -124,7 +124,7 @@ export default function Edit({ user }) {
                             <div>
                                 <label
                                     htmlFor="password"
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-slate-700"
                                 >
                                     Password Baru
                                 </label>
@@ -137,10 +137,10 @@ export default function Edit({ user }) {
                                         setData("password", event.target.value)
                                     }
                                     placeholder="Kosongkan jika tidak ingin mengubah password"
-                                    className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className="mt-1 w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                 />
 
-                                <p className="mt-1 text-xs text-gray-500">
+                                <p className="mt-1 text-xs text-slate-500">
                                     Isi hanya jika password ingin diganti.
                                 </p>
 
@@ -155,7 +155,7 @@ export default function Edit({ user }) {
                             <div className="flex items-center gap-3">
                                 <Link
                                     href={route("admin.users.index")}
-                                    className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300"
+                                    className="rounded-md bg-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-300"
                                 >
                                     Batal
                                 </Link>
@@ -163,7 +163,7 @@ export default function Edit({ user }) {
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="rounded-md bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-50"
                                 >
                                     {processing
                                         ? "Menyimpan..."

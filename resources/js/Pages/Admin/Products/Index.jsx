@@ -17,7 +17,7 @@ export default function Index({ products }) {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
+                <h2 className="text-xl font-semibold leading-tight text-slate-800">
                     Kelola Product
                 </h2>
             }
@@ -30,18 +30,18 @@ export default function Index({ products }) {
                         <div className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <h1 className="text-2xl font-bold text-gray-800">
+                                    <h1 className="text-2xl font-bold text-slate-800">
                                         Kelola Product
                                     </h1>
 
-                                    <p className="mt-1 text-sm text-gray-600">
+                                    <p className="mt-1 text-sm text-slate-600">
                                         Kelola data product yang tersedia.
                                     </p>
                                 </div>
 
                                 <Link
                                     href={route("admin.products.create")}
-                                    className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+                                    className="rounded-md bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700"
                                 >
                                     + Tambah Product
                                 </Link>
@@ -60,8 +60,8 @@ export default function Index({ products }) {
                             )}
 
                             <div className="mt-6 overflow-x-auto">
-                                <table className="min-w-full border border-gray-200">
-                                    <thead className="bg-gray-100">
+                                <table className="min-w-full border border-slate-200">
+                                    <thead className="bg-slate-100">
                                         <tr>
                                             <th className="border px-4 py-3 text-left">
                                                 No
@@ -142,7 +142,7 @@ export default function Index({ products }) {
                                             <tr>
                                                 <td
                                                     colSpan="5"
-                                                    className="border px-4 py-6 text-center text-gray-500"
+                                                    className="border px-4 py-6 text-center text-slate-500"
                                                 >
                                                     Belum ada product.
                                                 </td>
@@ -162,8 +162,8 @@ export default function Index({ products }) {
                                         }}
                                         className={`rounded-md px-3 py-2 text-sm ${
                                             link.active
-                                                ? "bg-indigo-600 text-white"
-                                                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                                                ? "bg-accent-600 text-white"
+                                                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                                         } ${
                                             !link.url
                                                 ? "cursor-not-allowed opacity-50"

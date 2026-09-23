@@ -15,18 +15,18 @@ export default function Index({ goodsReceipts, auth }) {
                             {/* Header */}
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <h1 className="text-2xl font-bold text-gray-800">
+                                    <h1 className="text-2xl font-bold text-slate-800">
                                         Goods Receipts
                                     </h1>
 
-                                    <p className="mt-1 text-sm text-gray-600">
+                                    <p className="mt-1 text-sm text-slate-600">
                                         Daftar penerimaan barang
                                     </p>
                                 </div>
 
                                 <Link
                                     href={route("goods-receipts.create")}
-                                    className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+                                    className="rounded-md bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700"
                                 >
                                     + Tambah Goods Receipt
                                 </Link>
@@ -34,34 +34,34 @@ export default function Index({ goodsReceipts, auth }) {
 
                             {/* Table */}
                             <div className="mt-6 overflow-x-auto">
-                                <table className="min-w-full border border-gray-200">
-                                    <thead className="bg-gray-100">
+                                <table className="min-w-full divide-y divide-slate-200 text-sm">
+                                    <thead className="bg-slate-50">
                                         <tr>
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 No
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Nomor GR
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Supplier
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Tanggal
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Produk
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Total Qty
                                             </th>
 
-                                            <th className="border px-4 py-3 text-left">
+                                            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
                                                 Aksi
                                             </th>
                                         </tr>
@@ -72,25 +72,25 @@ export default function Index({ goodsReceipts, auth }) {
                                             goodsReceipts.data.map(
                                                 (receipt, index) => (
                                                     <tr key={receipt.id}>
-                                                        <td className="border px-4 py-3">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
                                                             {goodsReceipts.from +
                                                                 index}
                                                         </td>
 
-                                                        <td className="border px-4 py-3 font-medium">
+                                                        <td className="border-t border-slate-100 px-4 py-3 font-medium">
                                                             {
                                                                 receipt.goods_receipt_no
                                                             }
                                                         </td>
 
-                                                        <td className="border px-4 py-3">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
                                                             {
                                                                 receipt.supplier
                                                                     .name
                                                             }
                                                         </td>
 
-                                                        <td className="border px-4 py-3">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
                                                             {new Date(
                                                                 receipt.received_date,
                                                             ).toLocaleDateString(
@@ -103,8 +103,8 @@ export default function Index({ goodsReceipts, auth }) {
                                                             )}
                                                         </td>
 
-                                                        <td className="border px-4 py-3">
-                                                            <ul className="list-disc pl-5">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
+                                                            <ol className="list-disc pl-5">
                                                                 {receipt.details.map(
                                                                     (
                                                                         detail,
@@ -122,10 +122,10 @@ export default function Index({ goodsReceipts, auth }) {
                                                                         </li>
                                                                     ),
                                                                 )}
-                                                            </ul>
+                                                            </ol>
                                                         </td>
 
-                                                        <td className="border px-4 py-3">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
                                                             {receipt.details.reduce(
                                                                 (
                                                                     total,
@@ -139,7 +139,7 @@ export default function Index({ goodsReceipts, auth }) {
                                                             )}
                                                         </td>
 
-                                                        <td className="border px-4 py-3">
+                                                        <td className="border-t border-slate-100 px-4 py-3">
                                                             <div className="flex items-center gap-3">
                                                                 {/* Detail */}
                                                                 <Link
@@ -147,7 +147,7 @@ export default function Index({ goodsReceipts, auth }) {
                                                                         "goods-receipts.show",
                                                                         receipt.id,
                                                                     )}
-                                                                    className="text-indigo-600 hover:underline"
+                                                                    className="text-accent-600 hover:underline"
                                                                 >
                                                                     Detail
                                                                 </Link>
@@ -199,7 +199,7 @@ export default function Index({ goodsReceipts, auth }) {
                                             <tr>
                                                 <td
                                                     colSpan="7"
-                                                    className="border px-4 py-6 text-center text-gray-500"
+                                                    className="border px-4 py-6 text-center text-slate-500"
                                                 >
                                                     Belum ada Goods Receipt.
                                                 </td>
@@ -220,8 +220,8 @@ export default function Index({ goodsReceipts, auth }) {
                                         }}
                                         className={`rounded-md px-3 py-2 text-sm ${
                                             link.active
-                                                ? "bg-indigo-600 text-white"
-                                                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                                                ? "bg-accent-600 text-white"
+                                                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                                         } ${
                                             !link.url
                                                 ? "cursor-not-allowed opacity-50"

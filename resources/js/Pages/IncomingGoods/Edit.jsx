@@ -19,7 +19,7 @@ export default function Edit({ incomingGood }) {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">
+                <h2 className="text-xl font-semibold leading-tight text-slate-800">
                     Edit Barang Masuk
                 </h2>
             }
@@ -31,11 +31,11 @@ export default function Edit({ incomingGood }) {
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                         <div className="p-6">
                             <div className="mb-6">
-                                <h1 className="text-2xl font-bold text-gray-900">
+                                <h1 className="text-2xl font-bold text-slate-900">
                                     Edit Barang Masuk
                                 </h1>
 
-                                <p className="mt-1 text-sm text-gray-600">
+                                <p className="mt-1 text-sm text-slate-600">
                                     Perbarui informasi barang masuk.
                                 </p>
                             </div>
@@ -45,7 +45,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="mb-4">
                                     <label
                                         htmlFor="item_name"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm font-medium text-slate-700"
                                     >
                                         Nama Barang
                                     </label>
@@ -57,7 +57,7 @@ export default function Edit({ incomingGood }) {
                                         onChange={(e) =>
                                             setData("item_name", e.target.value)
                                         }
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                        className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                     />
 
                                     {errors.item_name && (
@@ -71,7 +71,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="mb-4">
                                     <label
                                         htmlFor="quantity"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm font-medium text-slate-700"
                                     >
                                         Jumlah
                                     </label>
@@ -84,7 +84,7 @@ export default function Edit({ incomingGood }) {
                                         onChange={(e) =>
                                             setData("quantity", e.target.value)
                                         }
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                        className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                     />
 
                                     {errors.quantity && (
@@ -98,7 +98,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="mb-4">
                                     <label
                                         htmlFor="supplier"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm font-medium text-slate-700"
                                     >
                                         Supplier
                                     </label>
@@ -110,7 +110,7 @@ export default function Edit({ incomingGood }) {
                                         onChange={(e) =>
                                             setData("supplier", e.target.value)
                                         }
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                        className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                     />
 
                                     {errors.supplier && (
@@ -124,7 +124,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="mb-4">
                                     <label
                                         htmlFor="received_date"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm font-medium text-slate-700"
                                     >
                                         Tanggal Diterima
                                     </label>
@@ -139,7 +139,7 @@ export default function Edit({ incomingGood }) {
                                                 e.target.value,
                                             )
                                         }
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                        className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                     />
 
                                     {errors.received_date && (
@@ -153,7 +153,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="mb-6">
                                     <label
                                         htmlFor="description"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm font-medium text-slate-700"
                                     >
                                         Deskripsi
                                     </label>
@@ -168,7 +168,7 @@ export default function Edit({ incomingGood }) {
                                                 e.target.value,
                                             )
                                         }
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                        className="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-accent-500 focus:ring-accent-500"
                                     />
 
                                     {errors.description && (
@@ -182,7 +182,7 @@ export default function Edit({ incomingGood }) {
                                 <div className="flex items-center gap-3">
                                     <Link
                                         href={route("incoming-goods.index")}
-                                        className="rounded-md bg-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-300"
+                                        className="rounded-md bg-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-300"
                                     >
                                         Batal
                                     </Link>
@@ -190,7 +190,7 @@ export default function Edit({ incomingGood }) {
                                     <button
                                         type="submit"
                                         disabled={processing}
-                                        className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-black hover:bg-indigo-700 disabled:opacity-50"
+                                        className="rounded-md bg-accent-600 px-4 py-2 text-sm font-semibold text-black hover:bg-accent-700 disabled:opacity-50"
                                     >
                                         {processing
                                             ? "Menyimpan..."
