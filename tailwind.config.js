@@ -13,20 +13,38 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                sans: ["Inter", ...defaultTheme.fontFamily.sans],
+            },
+            borderRadius: {
+                xl: "0.875rem",
+                "2xl": "1.25rem",
             },
             colors: {
+                // Hijau Kalbe - primary accent (kesehatan, kesegaran)
                 accent: {
-                    50: "#eef6f4",
-                    100: "#d7e9e4",
-                    200: "#b0d3ca",
-                    300: "#84b8ab",
-                    400: "#5b9c8b",
-                    500: "#3d8271",
-                    600: "#2f6a5b",
-                    700: "#27554a",
-                    800: "#20443c",
-                    900: "#1a3731",
+                    50: "#eefaf3",
+                    100: "#d3f2e0",
+                    200: "#a7e4c1",
+                    300: "#72cf9d",
+                    400: "#3fb87c",
+                    500: "#1fa066",
+                    600: "#158452",
+                    700: "#136943",
+                    800: "#125437",
+                    900: "#10462f",
+                },
+                // Biru Medis - secondary accent (profesionalisme, keahlian medis)
+                secondary: {
+                    50: "#eef6fc",
+                    100: "#d6e9f7",
+                    200: "#aed3ef",
+                    300: "#7db7e3",
+                    400: "#4998d3",
+                    500: "#277fc0",
+                    600: "#1c65a0",
+                    700: "#195281",
+                    800: "#18436a",
+                    900: "#17395a",
                 },
             },
         },

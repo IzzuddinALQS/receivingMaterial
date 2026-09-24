@@ -1,4 +1,3 @@
-import ApplicationLogo from "@/Components/ApplicationLogo";
 import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
@@ -13,19 +12,20 @@ export default function AuthenticatedLayout({ header, children }) {
 
     return (
         <div className="min-h-screen bg-slate-50">
-            <nav className="bg-slate-900">
+            <nav className="border-b border-slate-100 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
-                            <div className="flex shrink-0 items-center gap-2">
+                            <div className="flex shrink-0 items-center gap-2.5">
                                 <Link
                                     href={route("dashboard")}
-                                    className="flex items-center gap-2"
+                                    className="flex items-center gap-2.5"
                                 >
-                                    <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent-600 text-sm font-bold text-white">
+                                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent-600 text-sm font-bold text-white">
                                         RM
                                     </span>
-                                    <span className="hidden text-sm font-semibold tracking-tight text-white sm:block">
+
+                                    <span className="hidden text-base font-bold tracking-tight text-slate-800 sm:block">
                                         Penerimaan Barang
                                     </span>
                                 </Link>
@@ -45,15 +45,6 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Goods Receipts
                                 </NavLink>
-
-                                {user.role === "admin" && (
-                                    <NavLink
-                                        href={route("admin.index")}
-                                        active={route().current("admin.*")}
-                                    >
-                                        Admin
-                                    </NavLink>
-                                )}
                             </div>
                         </div>
 
@@ -61,10 +52,10 @@ export default function AuthenticatedLayout({ header, children }) {
                             <div className="relative ms-3">
                                 <Dropdown>
                                     <Dropdown.Trigger>
-                                        <span className="inline-flex rounded-md">
+                                        <span className="inline-flex rounded-xl">
                                             <button
                                                 type="button"
-                                                className="inline-flex items-center rounded-md border border-transparent px-3 py-2 text-sm font-medium leading-4 text-slate-300 transition duration-150 ease-in-out hover:text-white focus:outline-none"
+                                                className="inline-flex items-center rounded-xl border border-transparent px-3 py-2 text-sm font-semibold leading-4 text-slate-600 transition duration-150 ease-in-out hover:bg-slate-50 hover:text-slate-800 focus:outline-none"
                                             >
                                                 {user.name}
 
@@ -110,7 +101,7 @@ export default function AuthenticatedLayout({ header, children }) {
                                         (previousState) => !previousState,
                                     )
                                 }
-                                className="inline-flex items-center justify-center rounded-md p-2 text-slate-300 transition duration-150 ease-in-out hover:bg-slate-800 hover:text-white focus:bg-slate-800 focus:text-white focus:outline-none"
+                                className="inline-flex items-center justify-center rounded-xl p-2 text-slate-500 transition duration-150 ease-in-out hover:bg-slate-100 hover:text-slate-700 focus:bg-slate-100 focus:text-slate-700 focus:outline-none"
                             >
                                 <svg
                                     className="h-6 w-6"
@@ -150,7 +141,7 @@ export default function AuthenticatedLayout({ header, children }) {
                 <div
                     className={
                         (showingNavigationDropdown ? "block" : "hidden") +
-                        " border-t border-slate-800 sm:hidden"
+                        " border-t border-slate-100 sm:hidden"
                     }
                 >
                     <div className="space-y-1 pb-3 pt-2">
@@ -167,24 +158,15 @@ export default function AuthenticatedLayout({ header, children }) {
                         >
                             Goods Receipts
                         </ResponsiveNavLink>
-
-                        {user.role === "admin" && (
-                            <ResponsiveNavLink
-                                href={route("admin.index")}
-                                active={route().current("admin.*")}
-                            >
-                                Admin
-                            </ResponsiveNavLink>
-                        )}
                     </div>
 
-                    <div className="border-t border-slate-800 pb-1 pt-4">
+                    <div className="border-t border-slate-100 pb-1 pt-4">
                         <div className="px-4">
-                            <div className="text-base font-medium text-white">
+                            <div className="text-base font-medium text-slate-800">
                                 {user.name}
                             </div>
 
-                            <div className="text-sm font-medium text-slate-400">
+                            <div className="text-sm font-medium text-slate-500">
                                 {user.email}
                             </div>
                         </div>
@@ -207,8 +189,8 @@ export default function AuthenticatedLayout({ header, children }) {
             </nav>
 
             {header && (
-                <header className="border-b border-slate-200 bg-white">
-                    <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
+                <header className="bg-white">
+                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                         {header}
                     </div>
                 </header>
